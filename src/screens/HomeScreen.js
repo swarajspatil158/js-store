@@ -14,14 +14,14 @@ const HomeScreen = {
           </a>
         <div class="product-name">
           <a href="/#/product/1">
-            ${product.name}
+            ₹${product.name}
           </a>
         </div>
         <div class="product-brand">
           ${product.brand}
         </div>
         <div class="product-price">
-          ₹${product.price}
+          ${product.price}
         </div>
         </div>
       </li>
