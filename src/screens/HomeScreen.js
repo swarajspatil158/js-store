@@ -12,10 +12,10 @@ const HomeScreen = {
       return '<div>Error in getting data</div>';
     }
 
-    const products = response.data;
+    const productsArr = response.data.products;
     return `
     <ul class="products">
-      ${products.map((product) => `
+      ${productsArr.map((product) => `
       <li>
         <div class="product">
           <a href="/#/product/${product._id}">
