@@ -9,12 +9,12 @@ const HomeScreen = {
         'Content-Type': 'application/json',
       },
     });
-    console.log(response.data.products[1].rating);
     if (!response || response.statusText !== 'OK') {
       return '<div>Error in getting data</div>';
     }
 
-    const productsArr = response.data.products;
+    const productsArr = response.data;
+    console.log(productsArr);
     return `
     <ul class="products">
       ${productsArr.map((product) => `
