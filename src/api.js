@@ -1,23 +1,22 @@
-import axios from 'axios';
-import { apiUrl } from './config';
+import axios from 'axios'
+import { apiUrl } from './config'
 
 const getProduct = async (id) => {
-  try {
-    const response = await axios({
-      url: `${apiUrl}/api/products/${id}`,
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-
-    });
-    if (response.statusText !== 'OK') {
-      throw new Error(response.data.message);
+    try {
+        const response = await axios({
+            url: `${apiUrl}/api/products/${id}`,
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+        if (response.statusText !== 'OK') {
+            throw new Error(response.data.message)
+        }
+        return response.data
+    } catch (err) {
+        // console.log(err);
+        return { err: err.response.data.message || err.message }
     }
-    return response.data;
-  } catch (err) {
-    // console.log(err);
-    return { err: err.message };
-  }
-};
-export default getProduct;
+}
+export default getProduct
