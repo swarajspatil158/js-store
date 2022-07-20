@@ -19,4 +19,4 @@ const getProduct = async (id) => {
         return { err: err.response.data.message || err.message }
     }
 }
-export default getProduct;
+export default getProduct
