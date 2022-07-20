@@ -35,6 +35,12 @@ button.primary {
 .full-width {
     width: 100%;
 }
+.success{
+  color:#227c22
+}
+.error{
+  color: #802828;
+}
 .grid-container {
     display: grid;
     grid-template-areas: 'header' 'main' 'footer';
