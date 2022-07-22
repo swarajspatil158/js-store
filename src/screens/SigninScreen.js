@@ -1,6 +1,6 @@
 const SigninScreen = {
-  after_render: () => {},
-  render: () => `
+    after_render: () => {},
+    render: () => `
     <div class="form-container">
       <form id="signin-form">
         <ul class="form-items">
@@ -28,5 +28,5 @@ const SigninScreen = {
       </form>
     </div>
     `,
-};
-export default SigninScreen;
+}
+export default SigninScreen
